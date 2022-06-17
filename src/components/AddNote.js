@@ -28,7 +28,7 @@ let unique_id = uuid()
               value={writtenNote.text}
             ></input>
             <input
-              className="formInputs"
+              className="form-inputs"
               type="date"
               name="date"
               onChange={(e) =>
@@ -37,9 +37,11 @@ let unique_id = uuid()
               value={writtenNote.date}
             ></input>
             <input
-              className="formInputs"
+              className="form-inputs"
               type="range"
               name="importance"
+              min="0"
+              max="10"
               onChange={(e) =>
                 setWrittenNote({
                   ...writtenNote,
@@ -48,7 +50,7 @@ let unique_id = uuid()
               }
               value={writtenNote.importance}
             ></input>
-            <input className="formInputs" type="submit"></input>
+            <input className="form-inputs" type="submit"></input>
           </form>
         </div>
       );

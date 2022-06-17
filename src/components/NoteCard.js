@@ -30,7 +30,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
         <div>
           ` <h2>{note.text}</h2>
           <h3>{note.date}</h3>
-          <h4>Importance: {note.importance}/100</h4>
+          <h4>Importance: {note.importance}/10</h4>
           <button
             onClick={(e) => {
               e.stopPropagation()
