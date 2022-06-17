@@ -1,8 +1,8 @@
 import './App.css';
 import {useState} from 'react'
 import NoteContainer from './components/NoteContainer';
-import SearchBar from './components/SearchBar';
 import AddNote from './components/AddNote';
+import Header from './components/Header'
 
 function App() {
 
@@ -11,7 +11,6 @@ function App() {
   function handleNotes(e){
     setAllNotes([...allNotes, e])
   }
-console.log(allNotes)
   function deleteNote(id){
     setAllNotes(allNotes.filter((x) => x.id !== id))
   }
@@ -24,15 +23,14 @@ console.log(allNotes)
     }
     setAllNotes([...allNotes])
   }
+
+  function onSearch(e){
+    console.log(e)
+  }
   return (
     <div className="App">
-      <h1 className="title"> Sticky Notes</h1>
-      <SearchBar />
+      <Header onSearch={onSearch}/>
       <AddNote handleNotes={handleNotes}/>
-      <div>
-      <h1>Tasks</h1>
-      <h1>Completed Tasks</h1>
-      </div>
       <NoteContainer allNotes={allNotes} deleteNote={deleteNote} completedNote={completedNote}/>
     </div>
   );
