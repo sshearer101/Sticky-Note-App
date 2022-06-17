@@ -29,6 +29,8 @@ function App() {
  
     const displayNotes = allNotes.filter((notes) =>
       notes.text.toLowerCase().includes(search.toLowerCase()))
+
+
   
   return (
     <div className="App">

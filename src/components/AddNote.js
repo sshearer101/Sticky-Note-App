@@ -18,7 +18,7 @@ let unique_id = uuid()
           <form className="note-form" onSubmit={handleSubmit}>
             <input
               placeholder="write a note!"
-              className="formInputs"
+              className="form-inputs"
               id="myForm"
               type="text"
               name="text"
