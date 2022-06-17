@@ -7,6 +7,8 @@ import Header from './components/Header'
 function App() {
 
   const [allNotes, setAllNotes] = useState([])
+  const [search, setSearch] = useState('')
+
 
   function handleNotes(e){
     setAllNotes([...allNotes, e])
@@ -24,14 +26,15 @@ function App() {
     setAllNotes([...allNotes])
   }
 
-  function onSearch(e){
-    console.log(e)
-  }
+ 
+    const displayNotes = allNotes.filter((notes) =>
+      notes.text.toLowerCase().includes(search.toLowerCase()))
+  
   return (
     <div className="App">
-      <Header onSearch={onSearch}/>
+      <Header onSearch={setSearch}/>
       <AddNote handleNotes={handleNotes}/>
-      <NoteContainer allNotes={allNotes} deleteNote={deleteNote} completedNote={completedNote}/>
+      <NoteContainer allNotes={displayNotes} deleteNote={deleteNote} completedNote={completedNote}/>
     </div>
   );
 }
