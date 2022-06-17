@@ -6,7 +6,7 @@ export default function SearchBar({onSearch}){
     function handleSubmit(e){
         e.preventDefault()
         onSearch(search)
-        // setSearch('')
+        setSearch('')
     }
 
     return (

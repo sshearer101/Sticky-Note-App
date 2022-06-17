@@ -15,7 +15,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
               deleteNote(note.id)
             }}
           >
-            Delete
+            🗑
           </button>
           <button
             onClick={(e) => {
@@ -23,7 +23,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
               completedNote(note)
             }}
           >
-            Completed
+            ✓
           </button>
         </div>
       ) : (
@@ -37,7 +37,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
               deleteNote(note.id)
             }}
           >
-            Delete
+             🗑
           </button>
           <button
             onClick={(e) => {
@@ -45,7 +45,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
               completedNote(note)
             }}
           >
-            Incompleted
+            ✕
           </button>
         </div>
       )}
