@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 export default function NoteCard({ note, deleteNote, completedNote }) {
   return (
-    <div>
+    <div className="note-container">
       {note.position === 0 ? (
                  
-        <div className="note-card">
+        <div className="incomplete-card">
           <h2>{note.text}</h2>
           <h3>{note.date}</h3>
           <h4>Importance: {note.importance}/100</h4>
@@ -27,7 +27,7 @@ export default function NoteCard({ note, deleteNote, completedNote }) {
           </button>
         </div>
       ) : (
-        <div>
+        <div className="complete-card">
           ` <h2>{note.text}</h2>
           <h3>{note.date}</h3>
           <h4>Importance: {note.importance}/10</h4>

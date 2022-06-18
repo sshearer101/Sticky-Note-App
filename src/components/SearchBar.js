@@ -18,7 +18,7 @@ export default function SearchBar({onSearch}){
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button type="submit">🔍</button>
+          <button className="search-button" type="submit">🔍</button>
         </form>
       );
     }
